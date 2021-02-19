@@ -14,6 +14,6 @@ The data used for training the model is available [here](https://www.kaggle.com/
 
 The complete workflow can be seen in the `workflow.ipynb`.
 
-## To be done:
+## Running the model
 
-In the future, I plan on dockerizing this project, as well as build application in Flask for easier usage.
+I used flask package, as well as Dockerfile to deploy the application. To run it, you can clone this repository onto your computer. Then, in the directory, run the following command (with Docker runnung): `docker build . -t spam_detection`. When the container is created, you can simply type `flask run`. Then, the application will be available under the following adress: `http://127.0.0.1:5000/`.
