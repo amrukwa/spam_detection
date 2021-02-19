@@ -1,8 +1,11 @@
 from flask import Flask, request, Response, render_template
 import pandas as pd
+import nltk
+from nltk.corpus import stopwords
 from models.encoding import preprocess
 from joblib import dump, load
 
+nltk.download('stopwords')
 mapped_results = ["ham", "spam"]
 encoder = load('models/encoder.joblib') 
 predictor = load('models/predictor.joblib')
