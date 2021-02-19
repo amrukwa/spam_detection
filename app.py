@@ -19,5 +19,4 @@ def check_message():
     X = preprocess(text, encoder)
     value = predictor.predict(X)
     meaning = mapped_results[value[0]]
-    result = "This message is " + meaning + "."
-    return result
+    return render_template('result.html', result=meaning)
